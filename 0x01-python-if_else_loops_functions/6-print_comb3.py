@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 for i in range(0, 10):
     for j in range(i+1, 10):
-        print(i, end='')
+        print("{:d}".format(i), end='')
         if i != 8:
-            print(j, end=', ')
+            print("{:d}".format(j), end=', ')
         else:
-            print(j)
+            print("{:d}".format(j))
