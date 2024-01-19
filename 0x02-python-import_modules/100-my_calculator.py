@@ -13,4 +13,3 @@ if __name__ == "__main__":
     fns = {'+': add, '-': sub, '*': mul, '/': div}
     print("{} {} {} = {}".format(a, sys.argv[2], b, fns[sys.argv[2]](a, b)))
     sys.exit(0)
-
