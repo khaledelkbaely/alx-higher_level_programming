@@ -8,6 +8,6 @@ def safe_print_list_integers(my_list=[], x=0):
             c += 1
         except (ValueError, TypeError):
             pass
-        i += i
+        i += 1
     print()
     return c
