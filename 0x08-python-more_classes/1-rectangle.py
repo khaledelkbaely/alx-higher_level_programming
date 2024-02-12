@@ -1,5 +1,6 @@
-#!/usr/bin/pthon3
+#!/usr/bin/python3
 """Module for rectangle class."""
+
 
 class Rectangle:
     """Class for rectangle."""
