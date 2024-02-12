@@ -99,3 +99,9 @@ class Rectangle:
             if i != self.__height - 1:
                 s += '\n'
         return s
+
+    def __repr__(self):
+        """
+        return string representaion of the rectangle
+        """
+        return 'Rectangle('+str(self.__width)+','+str(self.__height) + ')'
