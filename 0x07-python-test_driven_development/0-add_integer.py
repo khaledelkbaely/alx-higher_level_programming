@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Module for add integer method."""
+"""
+    Module for add integer method.
+"""
+
 
 def add_integer(a, b=98):
     """Adds two integers
@@ -20,6 +23,7 @@ def add_integer(a, b=98):
         raise TypeError('b must be an integer')
     a, b = int(a), int(b)
     return a + b
+
 
 if __name__ == "__main__":
     import doctest
