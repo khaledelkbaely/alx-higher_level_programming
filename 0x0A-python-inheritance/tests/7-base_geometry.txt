@@ -1,0 +1,24 @@
+Import class:
+  >>> base = __import__('7-base_geometry').BaseGeometry
+  >>> bg = base()
+
+Test integer value:
+  >>> bg.integer_validator('int', 12)
+
+Test integer value less than zero:
+  >>> bg.integer_validator('int', 0)
+  Traceback (most recent call last):
+  ...
+  ValueError: int must be greater than 0
+
+Test integer value:
+  >>> bg.integer_validator('int', -12)
+  Traceback (most recent call last):
+  ...
+  ValueError: int must be greater than 0
+
+Test string value:
+  >>> bg.integer_validator('int', 'asd')
+  Traceback (most recent call last):
+  ...
+  TypeError: int must be an integer
