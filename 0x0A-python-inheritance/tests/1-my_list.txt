@@ -1,0 +1,24 @@
+Import module:
+  >>> cls = __import__('1-my_list').MyList
+
+Test unsorted list:
+  >>> ls = cls()
+  >>> ls.append(2)
+  >>> ls.append(3)
+  >>> ls.append(4)
+  >>> ls.append(0)
+  >>> ls.append(1)
+  >>> ls.print_sorted()
+  [0, 1, 2, 3, 4]
+
+Test sorted list:
+  >>> cls.print_sorted(cls([0, 1, 2, 3, 4]))
+  [0, 1, 2, 3, 4]
+
+Test empty list:
+  >>> cls.print_sorted(cls([]))
+  []
+
+Test strings:
+  >>> cls.print_sorted(cls(['a', 'cab', 'bac', 'bca', 'cb', 'ca']))
+  ['a', 'bac', 'bca', 'ca', 'cab', 'cb']
