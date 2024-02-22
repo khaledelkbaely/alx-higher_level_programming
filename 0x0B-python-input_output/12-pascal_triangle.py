@@ -3,6 +3,8 @@
 
 
 def pascal_triangle(n):
+    """create a list of lists represnting n
+    rows of pascal triangle"""
     if n <= 0:
         return []
     triangle = [[1]]
