@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""base"""
+"""base class"""
 from json import dumps, loads
 
 
