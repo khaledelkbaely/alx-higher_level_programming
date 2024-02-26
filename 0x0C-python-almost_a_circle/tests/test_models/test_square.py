@@ -34,14 +34,14 @@ class TestSquare(unittest.TestCase):
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
             r = Square()
-        s = "Square.__init__() missing 1 required positional argument: 'size'"
+        s = "__init__() missing 1 required positional argument: 'size'"
         self.assertEqual(str(e.exception), s)
 
     def test_C_constructor_many_args(self):
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
             r = Square(1, 2, 3, 4, 5)
-        s = "Square.__init__() takes from 2 to 5 positional arguments but 6 \
+        s = "__init__() takes from 2 to 5 positional arguments but 6 \
 were given"
         self.assertEqual(str(e.exception), s)
 
@@ -204,7 +204,7 @@ were given"
         r = Square(5)
         with self.assertRaises(TypeError) as e:
             Square.area()
-        s = "Rectangle.area() missing 1 required positional argument: 'self'"
+        s = "area() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
     def test_I_area(self):
@@ -243,7 +243,7 @@ were given"
         r = Square(9)
         with self.assertRaises(TypeError) as e:
             Square.display()
-        s = "Rectangle.display() missing 1 required positional \
+        s = "display() missing 1 required positional \
 argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
@@ -426,7 +426,7 @@ argument: 'self'"
         r = Square(5, 2)
         with self.assertRaises(TypeError) as e:
             Square.__str__()
-        s = "Square.__str__() missing 1 required positional argument: 'self'"
+        s = "__str__() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
     def test_K_str(self):
@@ -450,7 +450,7 @@ argument: 'self'"
         r = Square(5, 2)
         with self.assertRaises(TypeError) as e:
             Square.update()
-        s = "Square.update() missing 1 required positional argument: 'self'"
+        s = "update() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
         d = r.__dict__.copy()
@@ -580,7 +580,7 @@ argument: 'self'"
         '''Tests to_dictionary() signature:'''
         with self.assertRaises(TypeError) as e:
             Square.to_dictionary()
-        s = "Square.to_dictionary() missing 1 required positional \
+        s = "to_dictionary() missing 1 required positional \
 argument: 'self'"
         self.assertEqual(str(e.exception), s)
 

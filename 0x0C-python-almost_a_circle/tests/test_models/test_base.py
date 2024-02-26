@@ -37,14 +37,14 @@ class TestBase(unittest.TestCase):
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
             Base.__init__()
-        msg = "Base.__init__() missing 1 required positional argument: 'self'"
+        msg = "__init__() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), msg)
 
     def test_D_constructor_args_2(self):
         '''Tests constructor signature with 2 notself args.'''
         with self.assertRaises(TypeError) as e:
             Base.__init__(self, 1, 2)
-        msg = "Base.__init__() takes from 1 to 2 positional arguments but 3 \
+        msg = "__init__() takes from 1 to 2 positional arguments but 3 \
 were given"
         self.assertEqual(str(e.exception), msg)
 
@@ -90,7 +90,7 @@ were given"
         '''Tests to_json_string() signature:'''
         with self.assertRaises(TypeError) as e:
             Base.to_json_string()
-        s = "Base.to_json_string() missing 1 required positional argument: \
+        s = "to_json_string() missing 1 required positional argument: \
 'list_dictionary'"
         self.assertEqual(str(e.exception), s)
 
@@ -162,7 +162,7 @@ were given"
         '''Tests to_json_string() signature:'''
         with self.assertRaises(TypeError) as e:
             Base.from_json_string()
-        s = "Base.from_json_string() missing 1 required positional \
+        s = "from_json_string() missing 1 required positional \
 argument: 'json_string'"
         self.assertEqual(str(e.exception), s)
 
