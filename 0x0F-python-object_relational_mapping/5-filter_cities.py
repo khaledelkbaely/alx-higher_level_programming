@@ -23,10 +23,8 @@ if __name__ == "__main__":
         (argv[4],),
     )
     query_rows = cur.fetchall()
-    for row in query_rows:
-        if row != query_rows[-1]:
-            print(row[0], end=", ")
-        else:
-            print(row[0])
+    str = ', '.join(map(lambda x: x[0], query_rows))
+    print(str)
+
     cur.close()
     conn.close()
