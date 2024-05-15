@@ -6,8 +6,8 @@ if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
 
     with urlopen(url) as response:
-        body = response.read()
+        body = response.read().decode('utf-8')
         print("Body responce:")
-        print("\t-", type(body))
+        print("\t- type:", type(body))
         print("\t- content:", body)
         print("\t- utf8 content:", body.decode("utf-8"))
