@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 """ script thst fetches https://alx-intrannet.hbtn.io/status """
 from urllib.request import urlopen
 from sys import argv
