@@ -2,7 +2,6 @@
 """ script thst fetches https://alx-intrannet.hbtn.io/status """
 import requests
 from sys import argv
-from pprint import pprint
 
 if __name__ == "__main__":
     repo = argv[1]
