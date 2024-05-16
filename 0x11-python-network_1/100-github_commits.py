@@ -10,8 +10,12 @@ if __name__ == "__main__":
         repo, owner)
 
     with requests.get(url) as response:
-        recent_ten_commits = response.json()[:11]
-        for commit in recent_ten_commits:
+        commits = response.json()
+        i = 0
+        for commit in commits:
+            if i == 10:
+                break
             print("{}: {}".format(
                   commit.get('sha'), commit.get(
                       'commit').get('author').get('name')))
+            i += 1
