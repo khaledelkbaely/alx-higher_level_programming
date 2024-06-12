@@ -1,6 +1,6 @@
 #!/usr/bin/node
-let n = parseInt(process.argv[2])
-if (Number.isNaN(n)) process.exit()
+const n = parseInt(process.argv[2]);
+if (Number.isNaN(n)) process.exit();
 for (let i = 0; i < n; i++) {
-  console.log('C is fun')
+  console.log('C is fun');
 }
