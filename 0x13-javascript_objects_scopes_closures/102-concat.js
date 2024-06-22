@@ -1,6 +1,7 @@
 #!/usr/bin/node
-const list = require('./100-data').list;
+const fs = require('fs');
 
-const mapped = list.map((n, idx) => n * idx);
-console.log(list);
-console.log(mapped);
+const f1Data = fs.readFileSync(process.argv[2], 'utf8');
+const f2Data = fs.readFileSync(process.argv[3], 'utf8');
+
+fs.appendFileSync(process.argv[4], f1Data + f2Data, 'utf8');
